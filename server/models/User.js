@@ -17,6 +17,18 @@ const User = sequelize.define('User', {
     unique: true,
     validate: { isEmail: true }
   },
+  avatar: {
+    type: DataTypes.STRING,
+    allowNull: true
+  },
+  phone: {
+    type: DataTypes.STRING,
+    allowNull: true
+  },
+  address: {
+    type: DataTypes.STRING,
+    allowNull: true
+  },
   // Nullable để hỗ trợ tài khoản Google OAuth (không có password riêng)
   password: {
     type: DataTypes.STRING,
